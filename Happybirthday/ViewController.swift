@@ -9,7 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var number: Int = 0
+    var number1: Int = 0
+    var number2: Int = 0
     @IBOutlet var monthlabel: UILabel!
     @IBOutlet var daylabel: UILabel!
     @IBOutlet var textlabel: UILabel!
@@ -25,17 +26,18 @@ class ViewController: UIViewController {
     }
 
     @IBAction func monthplus(){
-        number = number + 1
-        monthlabel.text = String(number)
-         if monthlabel.text == "6" && daylabel.text == "6" {
+        number1 = number1 + 1
+        monthlabel.text = String(number1)
+        if monthlabel.text == "6" && daylabel.text == "6"{
             textlabel.text = "お誕生日おめでとう！"
         } else {
             textlabel.text = " "
         }
     }
+    
     @IBAction func monthminus(){
-        number = number - 1
-        monthlabel.text = String(number)
+        number1 = number1 - 1
+        monthlabel.text = String(number1)
         if monthlabel.text == "6" && daylabel.text == "6" {
             textlabel.text = "お誕生日おめでとう！"
         } else {
@@ -43,8 +45,8 @@ class ViewController: UIViewController {
     }
     }
     @IBAction func dayplus(){
-        number = number + 1
-        daylabel.text = String(number)
+        number2 = number2 + 1
+        daylabel.text = String(number2)
         if monthlabel.text == "6" && daylabel.text == "6" {
             textlabel.text = "お誕生日おめでとう！"
         } else {
@@ -52,8 +54,8 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func dayminus(){
-        number = number - 1
-        daylabel.text = String(number)
+        number2 = number2 - 1
+        daylabel.text = String(number2)
         if monthlabel.text == "6" && daylabel.text == "6" {
             textlabel.text = "お誕生日おめでとう！"
         } else {
